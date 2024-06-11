@@ -84,7 +84,7 @@ UNION ALL
 SELECT raw_json['data']['home_search']['results']['41'] AS house FROM for_sale
 ;
 
-INSERT INTO for_sale_editing
+INSERT INTO for_sale_backup_json
 SELECT * from for_sale;
 
 INSERT INTO for_sale_clean
