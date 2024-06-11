@@ -126,7 +126,7 @@ INSERT INTO for_sale_clean
   (house['location']['address']['line']::text) AS address,
   (house['location']['address']['postal_code']::text) AS zip
 FROM for_sale_json
-ON CONFLICT (pk_for_sale) DO NOTHING
+ON CONFLICT (property_id, address) DO NOTHING
 ;
 DROP TABLE for_sale_json;
 DELETE FROM for_sale;
